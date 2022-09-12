@@ -1,0 +1,38 @@
+.bottom-nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(116, 116, 116);
+    width: 100%;
+    padding-top: 1.9rem;
+    padding-bottom: 0.8rem;
+    background: white;
+    display: flex;
+    flex-flow: row, nowrap;
+    justify-content: space-evenly;
+    background-color: #191C88;
+
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: #fff;
+}
+
+.bottom-nav a.active {
+    color: #fdf1ae;
+}
+
+.bottom-nav i {
+    display: block;
+}
+
+.bottom-nav span {
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+nav a {
+    font-size: 29px;
+}
