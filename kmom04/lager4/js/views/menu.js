@@ -11,8 +11,7 @@ let menu = {
             m(m.route.Link, {href: "/register"}, "Registera dig"),
             m(m.route.Link, {href: "/invoices"}, "Alla fakturor"),
             m(m.route.Link, {href: "/order"}, "Fakturera en order")
-            
-        ])
+        ]);
     }
 };
 

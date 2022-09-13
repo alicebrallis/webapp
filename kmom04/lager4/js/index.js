@@ -6,8 +6,8 @@ import form from "./views/form.js";
 import invoices from "./views/invoices.js";
 import login from "./views/login.js";
 import reg from "./views/register.js";
-import auth from "./models/auth.js"
-import order from "./views/order.js"
+import auth from "./models/auth.js";
+import order from "./views/order.js";
 
 m.route(document.body, "/", {
     "/": {
@@ -18,12 +18,12 @@ m.route(document.body, "/", {
     "/list": {
         render: function() {
             return m(list);
-    }
+        }
     },
     "/new": {
         render: function () {
             return m(form);
-    }
+        }
     },
     "/invoices": {
         onmatch: function() {
@@ -35,22 +35,20 @@ m.route(document.body, "/", {
         render: function (vnode) {
             return m(invoices, vnode);
         }
-        },
-        "/login": { 
-            render:function() {
-                return m(login);
+    },
+    "/login": {
+        render: function() {
+            return m(login);
         }
-        },
-        "/register": { 
-            render:function() {
-                return m(reg);
-            }
-        },
-        "/order": {
-            render: function() {
-                return m(order)
-            }
+    },
+    "/register": {
+        render: function() {
+            return m(reg);
+        }
+    },
+    "/order": {
+        render: function() {
+            return m(order);
+        }
     }
 });
-
- 

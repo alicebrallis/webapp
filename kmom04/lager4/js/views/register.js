@@ -1,5 +1,5 @@
 import m from "mithril";
-import reg from "../models/reg.js"
+import reg from "../models/reg.js";
 
 let register = {
     view: function() {
@@ -30,11 +30,8 @@ let register = {
                 }),
                 m("input[type=submit][value=Registera],button", "Registrera"),
                 m("a", {href: "#!/"}, "Gå tillbaka")
-           
-                ])
-        
-        ]}
-    };
+            ])];
+    }};
 
 
 export default register;

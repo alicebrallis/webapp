@@ -45,18 +45,17 @@ function updateStock() {
 }
 
 function newStock(prod) {
-    var updated_prod = {
-
+    let updatedProd = {
         api_key: `${ apiKey }`,
         stock: parseFloat(deliveries.currentDelivery.amount) + parseFloat(prod.stock)
     };
+
     m.request({
         method: "PUT",
         url: `${baseUrl}/products/:product_id`,
-        body: updated_prod
+        body: updatedProd
     });
 }
-
 
 export default deliveries;
 

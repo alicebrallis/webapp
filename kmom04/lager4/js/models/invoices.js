@@ -1,7 +1,6 @@
 import m from "mithril";
-import {baseUrl, apiKey, token} from "../vars.js";
+import {baseUrl, apiKey} from "../vars.js";
 import auth from "./auth.js";
-import orders from "./orders.js";
 
 
 let invoicesModel = {
@@ -15,21 +14,8 @@ let invoicesModel = {
                 'x-access-token': auth.token
             }
         }).then(function(result) {
-            invoicesModel.invoices = result.data
-        }).catch(error => {
-            console.log(error.message)
-            console.log(baseUrl)
-            console.log(token)
-            console.log(apiKey)
-
+            invoicesModel.invoices = result.data;
         });
-    },
-    createInvoice: function (orders) {
-        return m.request({
-            method: "POST",
-            url: `${baseUrl}/orders`,
-            body: orders.updateOrder
-        })
     }
 };
 

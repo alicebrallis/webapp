@@ -1,5 +1,5 @@
 import m from "mithril";
-import {baseUrl, apiKey, token} from "../vars.js";
+import {baseUrl, apiKey} from "../vars.js";
 
 let reg = {
     url: `${baseUrl}/auth/register`,
@@ -15,12 +15,12 @@ let reg = {
                 password: reg.password,
                 api_key: apiKey
             }
-        }).then(function(res){
+        }).then(function(reg) {
             reg.email = "";
             reg.password = "";
-            return m.route.set("/")
+            return m.route.set("/");
         });
-        }
     }
+};
 
 export default reg;

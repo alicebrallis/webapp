@@ -9,7 +9,7 @@ let order = {
         return m("main.container", [
             m("h1", "Välj order för att skapa faktura"),
             m("p", [
-                (order.success) ? m('.success',order.success) :  '',
+                (order.success) ? m('.success', order.success) : '',
             ]),
             m("form", {
                 onsubmit: function(event) {
@@ -19,14 +19,15 @@ let order = {
                 }
             }, [
                 m("br", ""),
-                    m("select.input",  {
-                        onchange: function(e) {
-                            orders.currentOrder = e.target.value;
+                m("select.input",  {
+                    onchange: function(e) {
+                        orders.currentOrder = e.target.value;
                     }
                 }, orders.currentOrders.map(function (ord) {
                     return [
-                        ord.status_id == 100 ? m("option", { value: ord.id }, 
-                        ord.name) : "",
+                        ord.status_id == 100 ? m("option", { value: ord.id },
+                            ord.name) :
+                            "",
                     ];
                 })),
                 m("input[type=submit][value=Skapa faktura].button", "Spara"),

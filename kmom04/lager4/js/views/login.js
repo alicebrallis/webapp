@@ -1,6 +1,5 @@
 import m from "mithril";
-import auth from "../models/auth.js"
-
+import auth from "../models/auth.js";
 
 let login = {
     view: function() {
@@ -31,12 +30,8 @@ let login = {
                 }),
                 m("input[type=submit][value=Logga in],button", "Logga in"),
                 m("a", {href: "#!/"}, "Gå tillbaka")
-           
-                ])
-        
-        ]}
-    };
-        
+            ])];
+    }};
 
 
 

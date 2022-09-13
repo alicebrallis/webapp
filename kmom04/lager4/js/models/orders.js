@@ -9,7 +9,7 @@ let orders = {
         return m.request({
             method: "GET",
             url: `${baseUrl}/orders?api_key=${apiKey}`
-        }).then(function (result){
+        }).then(function (result) {
             orders.currentOrders = result.data;
         });
     },
@@ -18,7 +18,7 @@ let orders = {
             orders.currentOrder : 7577;
         return m.request({
             method: "GET",
-            url:`${baseUrl}/orders/${orders.currentOrder}?api_key=${apiKey}`
+            url: `${baseUrl}/orders/${orders.currentOrder}?api_key=${apiKey}`
         }).then(function (result) {
             invoicesModel.getInvoices(result.data);
             orders.newStockOrder(result.data);
